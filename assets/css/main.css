@@ -178,11 +178,7 @@ http://themeforest.net/user/layerz
 
 @font-face {
 font-family: "Sofia Pro Soft";
-src: url("css/fonts/Sofia Pro Soft.eot");
-src: 
-url("assets/fonts/Sofia Pro Soft.woff") format("woff"),
-url("assets/fonts/Sofia Pro Soft.otf") format("opentype"),
-url("assets/fonts/Sofia Pro Soft.svg#filename") format("svg");
+src: url("assets/fonts/Sofia Pro Soft.ttf");
 }
 
 
