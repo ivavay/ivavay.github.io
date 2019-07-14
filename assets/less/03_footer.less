@@ -1,0 +1,37 @@
+
+/** 03. FOOTER
+################################################## **/
+
+
+	.footer {
+		position: relative;
+		margin-top: (@main_margin * 3);
+		padding: 50px 0;
+		font-size: 14px;
+		font-weight: 700;
+
+		.social {
+			a {
+				display: inline-block;
+				position: relative;
+
+				&:not(:last-child) { margin-right: @main_margin; }
+
+				.transition(all .2s);
+
+				&:first-child:before { display: none; }
+				&:hover { color: @primary_color; }
+			}
+		}
+
+
+		// responsive
+		.responsive(800px, {
+			margin-top: 50px;
+
+			.float_left,
+			.float_right { float: none; }
+
+			.social { margin-top: 25px; }
+		});
+	}

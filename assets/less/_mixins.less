@@ -1,0 +1,21 @@
+
+.transition(...) {
+	-webkit-transition: @arguments;
+	transition: @arguments;
+}
+
+.transform(@transform) {
+	-webkit-transform: @transform;
+	transform: @transform;
+}
+
+.animation(@animation) {
+	-webkit-animation: @animation;
+	animation: @animation;
+}
+
+.responsive(@media, @rules) {
+	@media (max-width: @media) {
+		@rules();
+	}
+}

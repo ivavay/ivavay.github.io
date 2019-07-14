@@ -1,0 +1,234 @@
+
+/** 06. NEWS
+################################################## **/
+
+
+	.news {
+		.row.posts_row:not(:last-child) { margin-bottom: (@main_margin * 3); }
+
+		.entry_post {
+			.entry_image {
+				position: relative;
+				overflow: hidden;
+				padding-top: 70%;
+			}
+
+			.entry_caption {
+				position: relative;
+				margin: @main_margin @main_margin 0;
+
+				.cat {
+					color: darken(@white_color, 40%);
+					font-size: 14px;
+					font-weight: 700;
+					margin-top: 5px;
+				}
+
+				.title {
+					font-family: @font2;
+					font-size: 20px;
+					font-weight: 700;
+				}
+
+				.arrow {
+					width: 20px;
+					height: 2px;
+					position: absolute;
+					top: 50%;
+					right: 15px;
+					margin-top: -1px;
+					background: @dark_color;
+					opacity: 0;
+
+					.transition(all .2s);
+
+					&:before {
+						content: '';
+						width: 10px;
+						height: 10px;
+						position: absolute;
+						top: 50%;
+						right: 0;
+						margin-top: -5px;
+						border-top: 2px solid @dark_color;
+						border-right: 2px solid @dark_color;
+
+						.transform(rotate(45deg));
+					}
+				}
+			}
+		}
+
+
+		// responsive
+		.responsive(800px, {
+			.row.posts_row:not(:last-child) { margin-bottom: (@main_margin * 2); }
+
+			.entry_post .entry_caption {
+				margin-right: 0;
+				margin-left: 0;
+			}
+		});
+	}
+
+// share
+// --------------------
+
+	.share {
+		.share_list {
+			li {
+				display: inline-block;
+				position: relative;
+				width: 80px;
+				height: 60px;
+				line-height: 58px;
+				border: 1px solid darken(@white_color, 15%);
+				border-radius: 2px;
+
+				&:not(:last-child) { margin-right: 10px; }
+
+				&:before {
+					content: '';
+					width: 0;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 100%;
+					background: lighten(@dark_color, 5%);
+
+					.transition(all .4s);
+				}
+
+				&.share_facebook:before { background: #4d70a8; }
+				&.share_twitter:before { background: #00bbf2; }
+				&.share_pinterest:before { background: #cb3737; }
+				&.share_linkedin:before { background: #1687b1; }
+
+				a {
+					display: block;
+					position: relative;
+					z-index: 1;
+
+					.transition(all .4s);
+				}
+
+				&:hover {
+					&:before {
+						width: 100%;
+						left: 0;
+
+						.transition(width .4s);
+					}
+
+					a { color: @white_color; }
+				}
+			}
+		}
+
+
+		// responsive
+		.responsive(600px, {
+			.share_list {
+				li {
+					width: 44px;
+					height: 44px;
+					line-height: 42px;
+
+					&:not(:last-child) { margin-right: 5px; }
+				}
+			}
+		});
+	}
+
+
+// newsletter
+// --------------------
+
+	.newsletter_form {
+		position: relative;
+
+		.newsletter_email {
+			display: inline-block;
+			height: 70px;
+			padding-right: 50px;
+			padding-left: 0;
+			font-size: 30px;
+			font-weight: 700;
+			color: @dark_color;
+			border-bottom: 4px solid @dark_color;
+			border-radius: 0;
+			box-shadow: none;
+			background: transparent;
+
+			&::-webkit-input-placeholder { color: @dark_color; }
+			&::-moz-input-placeholder { color: @dark_color; }
+			&:-moz-input-placeholder { color: @dark_color; }
+			&:-ms-input-placeholder { color: @dark_color; }
+
+			&:focus {
+				border-bottom: 4px solid @primary_color;
+
+				&::-webkit-input-placeholder { color: darken(@white_color, 20%); }
+				&::-moz-input-placeholder { color: darken(@white_color, 20%); }
+				&:-moz-input-placeholder { color: darken(@white_color, 20%); }
+				&:-ms-input-placeholder { color: darken(@white_color, 20%); }
+			}
+		}
+
+		.send_newsletter {
+			display: inline-block;
+			width: 50px;
+			height: 70px;
+			padding: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+			border: none;
+			font-size: 30px;
+			text-align: right;
+
+			&:before { display: none; }
+			&:hover { color: inherit; }
+
+			.transition(all .2s);
+
+			&:hover { color: darken(@white_color, 40%); }
+		}
+
+
+		// responsive
+		.responsive(600px, {
+			.newsletter_email {
+				font-size: 16px;
+			}
+		});
+	}
+
+
+// pagination
+// --------------------
+
+	.pagination {
+		text-align: center;
+		margin-top: (@main_margin * 3);
+
+		.next_page a {
+			.transition(all .2s);
+
+			&:hover { color: darken(@white_color, 40%); }
+		}
+
+		.prev_page.disabled { color: darken(@white_color, 40%); }
+
+		.pagination_list {
+			li {
+				display: inline-block;
+				font-size: 14px;
+				color: darken(@white_color, 40%);
+
+				&:not(:last-child) { margin-right: (@main_margin / 2); }
+
+				&.number { color: @dark_color; }
+			}
+		}
+	}
