@@ -1067,6 +1067,11 @@ body * {
 	height: 360px;
 }
 
+.bio_image {
+	width:600px;
+	height: 600px;
+}
+
 
 .entry .entry_caption {
 	position: relative;
