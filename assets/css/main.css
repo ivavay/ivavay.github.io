@@ -1146,10 +1146,7 @@ body * {
 	color: #ffffff;
 }
 
-.entry:hover .entry_image {
-	-webkit-transform: scale(1.2);
-	transform: scale(1.2);
-}
+
 
 .entry:hover .entry_overlay {
 	opacity: 1;
