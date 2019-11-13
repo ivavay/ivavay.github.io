@@ -287,13 +287,7 @@ a.link:before {
 	transition: all 0.3s cubic-bezier(0.6, 0.3, 0, 1);
 }
 
-a.link:hover:before {
 
-	left: 0;
-	width: 100%;
-	-webkit-transition: width 0.3s cubic-bezier(0.6, 0.3, 0, 1);
-	transition: width 0.3s cubic-bezier(0.6, 0.3, 0, 1);
-}
 
 img,
 video {
